@@ -5,20 +5,18 @@
 }
 
 .calculatorGrid {
-  height: 25vh;
-  width: 20vh;
+  height: 40vh;
+  width: 40vw;
   display: grid;
-  grid-template: "gbbb gbbb gbbb gbbb" "gbac gbps gbp gbd" "gb7 gb8 gb9 gbx" "gb4 gb5 gb6 gbm" "gb1 gb2 gb3 gbplus" "gb0 gb0 gbdot gbequals";
+  grid-template: "gbbb gbbb gbbb gbbb" "gbbb gbbb gbbb gbbb" "gbac gbps gbp gbd" "gb7 gb8 gb9 gbx" "gb4 gb5 gb6 gbm" "gb1 gb2 gb3 gbplus" "gb0 gb0 gbdot gbequals";
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-  row-gap: 0px;
-  -moz-column-gap: 0px;
-       column-gap: 0px;
+  grid-template-rows: 14.3% 14.3% 14.3% 14.3% 14.3%;
+  background-color: aqua;
 }
 
 .calculatorButton {
-  height: 5vh;
-  width: 5vh;
+  height: 100%;
+  width: 100%;
   border: 2px solid black;
 }
 
