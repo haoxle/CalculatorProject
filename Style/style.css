@@ -5,29 +5,32 @@
   background-color: black;
 }
 
-.calculatorGrid {
+section {
+  height: 50vh;
+  width: 50vh;
+}
+section .calculatorGrid {
   height: 70vh;
   width: 50vh;
   display: grid;
-  grid-template: "gbbb gbbb gbbb gbbb" "gbbb gbbb gbbb gbbb" "gbac gbp gbx gbd" "gb7 gb8 gb9 gbm" "gb4 gb5 gb6 gbplus" "gb1 gb2 gb3 gbequals" "gb0 gbdot gbps gbequals";
+  grid-template: "gbac gbp gbx gbd" "gb7 gb8 gb9 gbm" "gb4 gb5 gb6 gbplus" "gb1 gb2 gb3 gbequals" "gb0 gbdot gbps gbequals";
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 14.3% 14.3% 14.3% 14.3% 14.3%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
   align-items: center;
   justify-items: center;
-  border: 5px solid white;
-  border-radius: 20px;
+  border: 2px solid white;
+  border-radius: 0 0 20px 20px;
   box-shadow: 0 0 10px 5px #56ab91 inset, 0 0 10px 5px #56ab91;
   padding: 2%;
 }
-
-.calculatorButton {
+section .calculatorButton {
   display: flex;
-  height: 80%;
-  width: 80%;
+  height: 85%;
+  width: 85%;
   border: 2px solid black;
-  border-radius: 25px;
-  border: 5px solid white;
-  box-shadow: 0 0 10px 5px #00b4d8 inset, 0 0 10px 5px #00b4d8;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px 3px #00b4d8 inset, 0 0 10px 3px #00b4d8;
   color: white;
   align-items: center;
   justify-content: center;
@@ -36,97 +39,77 @@
   font-weight: 800;
   text-shadow: 0px 0px 30px #2a9d8f, 0px 0px 30px #2a9d8f;
 }
-
-#gbbb {
+section #gbbb {
   grid-area: gbbb;
-  border: 5px solid white;
+  border: 3px solid white;
   box-shadow: 0 0 10px 5px #ff686b inset, 0 0 10px 5px #ff686b;
-  width: 90%;
-  border-radius: 10px;
+  width: 100%;
+  height: 30%;
+  border-radius: 20px 20px 0 0;
   text-shadow: 0 0 10px #00b4d8, 0 0 10px #00b4d8;
-  margin-top: -6%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   padding: 0 3% 2% 0;
   font-size: 50px;
 }
-
-#gbac {
+section #gbac {
   grid-area: gbac;
   box-shadow: 0 0 10px 5px #56ab91 inset, 0 0 10px 5px #56ab91;
 }
-
-#gbps {
+section #gbps {
   grid-area: gbps;
 }
-
-#gbp {
+section #gbp {
   grid-area: gbp;
 }
-
-#gbd {
+section #gbd {
   grid-area: gbd;
 }
-
-#gb7 {
+section #gb7 {
   grid-area: gb7;
 }
-
-#gb8 {
+section #gb8 {
   grid-area: gb8;
 }
-
-#gb9 {
+section #gb9 {
   grid-area: gb9;
 }
-
-#gbx {
+section #gbx {
   grid-area: gbx;
 }
-
-#gb4 {
+section #gb4 {
   grid-area: gb4;
 }
-
-#gb5 {
+section #gb5 {
   grid-area: gb5;
 }
-
-#gb6 {
+section #gb6 {
   grid-area: gb6;
 }
-
-#gbm {
+section #gbm {
   grid-area: gbm;
 }
-
-#gb1 {
+section #gb1 {
   grid-area: gb1;
 }
-
-#gb2 {
+section #gb2 {
   grid-area: gb2;
 }
-
-#gb3 {
+section #gb3 {
   grid-area: gb3;
 }
-
-#gbplus {
+section #gbplus {
   grid-area: gbplus;
 }
-
-#gb0 {
+section #gb0 {
   grid-area: gb0;
   width: 90%;
 }
-
-#gbdot {
+section #gbdot {
   grid-area: gbdot;
 }
-
-#gbequals {
+section #gbequals {
   grid-area: gbequals;
   box-shadow: 0 0 10px 5px #ffc300 inset, 0 0 10px 5px #ffc300;
   height: 90%;
