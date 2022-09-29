@@ -1,7 +1,5 @@
 @use "./variables" as *;
-@use "./mediaqueriesmobile" as *;
-@use "./mediaqueriesipad" as *;
-@use "./mediaquerieslaptop" as *;
+@use "./grid" as *;
 
 * {
   box-sizing: border-box;
@@ -23,30 +21,6 @@ body {
     height: 100%;
     width: 40vh;
     background-color: rgba(0, 0, 0, 0.7);
-
-    .calculatorGrid {
-      height: 55vh;
-      width: 40vh;
-      display: grid;
-      grid-template:
-    // "gbbb gbbb gbbb gbbb"
-    // "gbbb gbbb gbbb gbbb"
-
-        "gbac gbp gbx gbd"
-        "gb7 gb8 gb9 gbm"
-        "gb4 gb5 gb6 gbplus"
-        "gb1 gb2 gb3 gbequals"
-        "gb0 gbdot gbps gbequals";
-      grid-template-columns: 25% 25% 25% 25%;
-      grid-template-rows: 20% 20% 20% 20% 20%;
-      align-items: center;
-      justify-items: center;
-      border: 2px solid white;
-      border-radius: 0 0 20px 20px;
-      box-shadow: 0 0 10px 5px $color-quaternary inset,
-        0 0 10px 5px $color-quaternary;
-      padding: 2%;
-    }
 
     .calculatorButton {
       display: flex;
@@ -91,75 +65,6 @@ body {
         0 0 30px rgb(255, 132, 255), 0 0 70px rgb(255, 132, 255),
         0 0 80px rgb(255, 132, 255), 0 0 90px rgb(255, 132, 255),
         0 0 10px rgb(255, 132, 255);
-    }
-
-    button {
-      text-decoration: none;
-      background: none;
-    }
-    #gbac {
-      grid-area: gbac;
-
-      box-shadow: 0 0 10px 5px $color-quaternary inset,
-        0 0 10px 5px $color-quaternary;
-    }
-    #gbps {
-      grid-area: gbps;
-    }
-    #gbp {
-      grid-area: gbp;
-    }
-    #gbd {
-      grid-area: gbd;
-    }
-    #gb7 {
-      grid-area: gb7;
-    }
-    #gb8 {
-      grid-area: gb8;
-    }
-    #gb9 {
-      grid-area: gb9;
-    }
-    #gbx {
-      grid-area: gbx;
-    }
-    #gb4 {
-      grid-area: gb4;
-    }
-    #gb5 {
-      grid-area: gb5;
-    }
-    #gb6 {
-      grid-area: gb6;
-    }
-    #gbm {
-      grid-area: gbm;
-    }
-    #gb1 {
-      grid-area: gb1;
-    }
-    #gb2 {
-      grid-area: gb2;
-    }
-    #gb3 {
-      grid-area: gb3;
-    }
-    #gbplus {
-      grid-area: gbplus;
-    }
-    #gb0 {
-      grid-area: gb0;
-      width: 90%;
-    }
-    #gbdot {
-      grid-area: gbdot;
-    }
-    #gbequals {
-      grid-area: gbequals;
-      box-shadow: 0 0 10px 5px $color-tertiary inset,
-        0 0 10px 5px $color-tertiary;
-      height: 90%;
     }
   }
 }
