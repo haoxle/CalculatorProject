@@ -8,8 +8,9 @@
   margin: 0;
   padding: 0;
 }
-
-body {
+.calculatorGrid {
+  height: 25vh;
+  width: 20vh;
   display: grid;
   grid-template:
     "gbbb gbbb gbbb gbbb"
@@ -20,70 +21,80 @@ body {
     "gb0 gb0 gbdot gbequals";
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 20% 20% 20% 20% 20%;
+  row-gap: 0px;
+  column-gap: 0px;
 }
 
-.gbbb {
-  grid-area: gbbb;
-}
-.gbac {
-  grid-area: gbac;
-}
-.gbps {
-  grid-area: gbps;
-}
-.gbp {
-  grid-area: gbp;
-}
-.gbd {
-  grid-area: gbd;
-}
-.gb7 {
-  grid-area: gb7;
-}
-.gb8 {
-  grid-area: gb8;
-}
-.gb9 {
-  grid-area: gb9;
-}
-.gbx {
-  grid-area: gbx;
-}
-.gb4 {
-  grid-area: gb4;
-}
-.gb5 {
-  grid-area: gb5;
-}
-.gb6 {
-  grid-area: gb6;
-}
-.gbm {
-  grid-area: gbm;
-}
-.gb1 {
-  grid-area: gb1;
-}
-.gb2 {
-  grid-area: gb2;
-}
-.gb3 {
-  grid-area: gb3;
-}
-.gbplus {
-  grid-area: gbplus;
-}
-.gb0 {
-  grid-area: gb0;
-}
-.gbdot {
-  grid-area: gbdot;
-}
-.gbequals {
-  grid-area: gbequals;
-}
-div {
-  border: 5px solid black;
+.calculatorButton {
   height: 5vh;
   width: 5vh;
+  border: 2px solid black;
 }
+
+#gbbb {
+  grid-area: gbbb;
+  width: 100%;
+}
+#gbac {
+  grid-area: gbac;
+}
+#gbps {
+  grid-area: gbps;
+}
+#gbp {
+  grid-area: gbp;
+}
+#gbd {
+  grid-area: gbd;
+}
+#gb7 {
+  grid-area: gb7;
+}
+#gb8 {
+  grid-area: gb8;
+}
+#gb9 {
+  grid-area: gb9;
+}
+#gbx {
+  grid-area: gbx;
+}
+#gb4 {
+  grid-area: gb4;
+}
+#gb5 {
+  grid-area: gb5;
+}
+#gb6 {
+  grid-area: gb6;
+}
+#gbm {
+  grid-area: gbm;
+}
+#gb1 {
+  grid-area: gb1;
+}
+#gb2 {
+  grid-area: gb2;
+}
+#gb3 {
+  grid-area: gb3;
+}
+#gbplus {
+  grid-area: gbplus;
+}
+#gb0 {
+  grid-area: gb0;
+  width: 100%;
+}
+#gbdot {
+  grid-area: gbdot;
+}
+#gbequals {
+  grid-area: gbequals;
+}
+// div {
+//   border: 5px solid black;
+//   height: 5vh;
+//   width: 5vh;
+// }

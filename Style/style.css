@@ -4,95 +4,102 @@
   padding: 0;
 }
 
-body {
+.calculatorGrid {
+  height: 25vh;
+  width: 20vh;
   display: grid;
   grid-template: "gbbb gbbb gbbb gbbb" "gbac gbps gbp gbd" "gb7 gb8 gb9 gbx" "gb4 gb5 gb6 gbm" "gb1 gb2 gb3 gbplus" "gb0 gb0 gbdot gbequals";
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 20% 20% 20% 20% 20%;
+  row-gap: 0px;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
 }
 
-.gbbb {
+.calculatorButton {
+  height: 5vh;
+  width: 5vh;
+  border: 2px solid black;
+}
+
+#gbbb {
   grid-area: gbbb;
+  width: 100%;
 }
 
-.gbac {
+#gbac {
   grid-area: gbac;
 }
 
-.gbps {
+#gbps {
   grid-area: gbps;
 }
 
-.gbp {
+#gbp {
   grid-area: gbp;
 }
 
-.gbd {
+#gbd {
   grid-area: gbd;
 }
 
-.gb7 {
+#gb7 {
   grid-area: gb7;
 }
 
-.gb8 {
+#gb8 {
   grid-area: gb8;
 }
 
-.gb9 {
+#gb9 {
   grid-area: gb9;
 }
 
-.gbx {
+#gbx {
   grid-area: gbx;
 }
 
-.gb4 {
+#gb4 {
   grid-area: gb4;
 }
 
-.gb5 {
+#gb5 {
   grid-area: gb5;
 }
 
-.gb6 {
+#gb6 {
   grid-area: gb6;
 }
 
-.gbm {
+#gbm {
   grid-area: gbm;
 }
 
-.gb1 {
+#gb1 {
   grid-area: gb1;
 }
 
-.gb2 {
+#gb2 {
   grid-area: gb2;
 }
 
-.gb3 {
+#gb3 {
   grid-area: gb3;
 }
 
-.gbplus {
+#gbplus {
   grid-area: gbplus;
 }
 
-.gb0 {
+#gb0 {
   grid-area: gb0;
+  width: 100%;
 }
 
-.gbdot {
+#gbdot {
   grid-area: gbdot;
 }
 
-.gbequals {
+#gbequals {
   grid-area: gbequals;
-}
-
-div {
-  border: 5px solid black;
-  height: 5vh;
-  width: 5vh;
 }/*# sourceMappingURL=style.css.map */
