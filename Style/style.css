@@ -39,7 +39,6 @@ body section .calculatorButton {
   display: flex;
   height: 85%;
   width: 85%;
-  border: 2px solid black;
   border-radius: 10px;
   border: 2px solid white;
   box-shadow: 0 0 10px 3px #00b4d8 inset, 0 0 10px 3px #00b4d8;
@@ -64,6 +63,19 @@ body section #gbbb {
   align-items: flex-end;
   padding: 0 3% 2% 0;
   font-size: 50px;
+}
+body section button:focus,
+body section button:active,
+body section #gbac:focus,
+body section #gbequals:active {
+  border: 1px solid white;
+  box-shadow: 0 0 10px 3px #ff686b inset, 0 0 10px 3px #ff686b;
+  color: #ff686b;
+  text-shadow: 0 0 400px rgb(255, 132, 255), 0 0 50px rgb(255, 132, 255), 0 0 30px rgb(255, 132, 255), 0 0 70px rgb(255, 132, 255), 0 0 80px rgb(255, 132, 255), 0 0 90px rgb(255, 132, 255), 0 0 10px rgb(255, 132, 255);
+}
+body section button {
+  text-decoration: none;
+  background: none;
 }
 body section #gbac {
   grid-area: gbac;

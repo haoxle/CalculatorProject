@@ -52,7 +52,6 @@ body {
       display: flex;
       height: 85%;
       width: 85%;
-      border: 2px solid black;
       border-radius: 10px;
       border: 2px solid white;
       box-shadow: 0 0 10px 3px $color-primary inset, 0 0 10px 3px $color-primary;
@@ -80,7 +79,24 @@ body {
       font-size: 50px;
       // margin-top: -20%;
     }
+    button:focus,
+    button:active,
+    #gbac:focus,
+    #gbequals:active {
+      border: 1px solid white;
+      box-shadow: 0 0 10px 3px $color-secondary inset,
+        0 0 10px 3px $color-secondary;
+      color: $color-secondary;
+      text-shadow: 0 0 400px rgb(255, 132, 255), 0 0 50px rgb(255, 132, 255),
+        0 0 30px rgb(255, 132, 255), 0 0 70px rgb(255, 132, 255),
+        0 0 80px rgb(255, 132, 255), 0 0 90px rgb(255, 132, 255),
+        0 0 10px rgb(255, 132, 255);
+    }
 
+    button {
+      text-decoration: none;
+      background: none;
+    }
     #gbac {
       grid-area: gbac;
 
