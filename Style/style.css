@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.calculatorGrid {
+  display: grid;
+  grid-template: "gbb gbb gbb gbb" "gbac gbps gb% gbd" "gb7 gb8 gb9 gbx" "gb4 gb5 gb6 gb-" "gb1 gb2 gb3 gb+" "gbb gbb gb. gb=";
+}
+
+div {
+  border: 5px solid black;
+  height: 5vh;
+  width: 5vh;
+}/*# sourceMappingURL=style.css.map */
