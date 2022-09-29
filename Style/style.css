@@ -45,6 +45,11 @@
   border-radius: 10px;
   text-shadow: 0 0 10px #00b4d8, 0 0 10px #00b4d8;
   margin-top: -6%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 3% 2% 0;
+  font-size: 50px;
 }
 
 #gbac {
