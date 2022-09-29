@@ -5,42 +5,65 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 2%;
   padding: 0;
+  background-color: black;
 }
 .calculatorGrid {
-  height: 50vh;
-  width: 50vw;
+  height: 70vh;
+  width: 50vh;
   display: grid;
   grid-template:
     "gbbb gbbb gbbb gbbb"
     "gbbb gbbb gbbb gbbb"
-    "gbac gbps gbp gbd"
-    "gb7 gb8 gb9 gbx"
-    "gb4 gb5 gb6 gbm"
-    "gb1 gb2 gb3 gbplus"
-    "gb0 gb0 gbdot gbequals";
+    "gbac gbp gbx gbd"
+    "gb7 gb8 gb9 gbm"
+    "gb4 gb5 gb6 gbplus"
+    "gb1 gb2 gb3 gbequals"
+    "gb0 gbdot gbps gbequals";
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 14.3% 14.3% 14.3% 14.3% 14.3%;
   align-items: center;
   justify-items: center;
+  border: 5px solid white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 5px $color-quaternary inset,
+    0 0 10px 5px $color-quaternary;
+  padding: 2%;
 }
 
 .calculatorButton {
-  height: 70%;
-  width: 70%;
+  display: flex;
+  height: 80%;
+  width: 80%;
   border: 2px solid black;
-  border-radius: 40px;
+  border-radius: 30px;
+  border: 5px solid white;
+  box-shadow: 0 0 10px 5px $color-primary inset, 0 0 10px 5px $color-primary;
+  color: white;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  text-shadow: 0px 0px 30px $color-quinary, 0px 0px 30px $color-quinary;
 }
 
 #gbbb {
   grid-area: gbbb;
+  border: 5px solid white;
+  box-shadow: 0 0 10px 5px $color-secondary inset, 0 0 10px 5px $color-secondary;
   width: 90%;
-  border: 10px solid $color-primary;
+  border-radius: 10px;
+  text-shadow: 0 0 10px $color-primary, 0 0 10px $color-primary;
+  margin-top: -6%;
 }
+
 #gbac {
   grid-area: gbac;
+
+  box-shadow: 0 0 10px 5px $color-quaternary inset,
+    0 0 10px 5px $color-quaternary;
 }
 #gbps {
   grid-area: gbps;
@@ -96,6 +119,8 @@
 }
 #gbequals {
   grid-area: gbequals;
+  box-shadow: 0 0 10px 5px $color-tertiary inset, 0 0 10px 5px $color-tertiary;
+  height: 90%;
 }
 // div {
 //   border: 5px solid black;
