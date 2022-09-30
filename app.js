@@ -59,6 +59,7 @@ for (var i = 0; i < numbers.length; i++) {
 //function to use operators, previous function can work?
 
 const getOperator = (e) => {
+  //storage as above
   const currNum = displayScreen.textContent;
   const lastNum = currNum[currNum.length - 1];
   if (
@@ -67,6 +68,7 @@ const getOperator = (e) => {
     lastNum === "x" ||
     lastNum === "÷"
   ) {
+    //adding substring returns all of the first sequence of numbers
     const newNum =
       currNum.substring(0, currNum.length - 1) + e.target.textContent;
     displayScreen.textContent = newNum;
@@ -78,6 +80,8 @@ const getOperator = (e) => {
 for (var i = 0; i < operator.length; i++) {
   operator[i].addEventListener("click", getOperator);
 }
+
+equals.addEventListener("click");
 
 // const Calculatrice = (a, b, op) => {
 //   switch (op) {
