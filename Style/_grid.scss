@@ -29,8 +29,7 @@ button {
 #gbac {
   grid-area: gbac;
   width: 95%;
-  box-shadow: 0 0 10px 5px $color-quaternary inset,
-    0 0 10px 5px $color-quaternary;
+  box-shadow: 0 0 10px 3px $color-senary inset, 0 0 10px 3px $color-senary;
 }
 #gbps {
   grid-area: gbps;
@@ -80,6 +79,7 @@ button {
 #gb0 {
   grid-area: gb0;
   width: 90%;
+  box-shadow: 0 0 10px 3px $color-senary inset, 0 0 10px 3px $color-senary;
 }
 #gbdot {
   grid-area: gbdot;
