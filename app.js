@@ -7,7 +7,8 @@ const numbers = Array.from(document.querySelectorAll(".numBtn"));
 const plus = document.querySelector(".operatorBtnPlus");
 const divide = document.querySelector(".operatorBtnDivide");
 const multiply = document.querySelector(".operatorBtnMultiply");
-const minus = document.querySelector(".operatorBtnMinus");
+const subtract = document.querySelector(".operatorBtnMinus");
+const equals = document.querySelector(".equalsBtn");
 
 let resultDisplayed = false;
 
@@ -31,7 +32,6 @@ operator.addEventListener("click", startCalc);
 const enteringNumbs = (e) => {
   const currNum = displayScreen.textContent;
   const lastNum = currNum[currNum.length - 1];
-
   //remove 0 when you press AC
   if (currNum[0] === "0") {
     displayScreen.textContent = "";
@@ -62,4 +62,14 @@ for (var i = 0; i < numbers.length; i++) {
 //function to add numbers
 //will need a current value and previous value
 //when I press equals it will trigger the answer only if there is a + there
-const addition = (e) => {};
+// on click of 'equal' button
+
+//start with a really basic function and build up (switch cases)
+const addition = (e) => {
+  if (plus === "+") {
+    displayScreen.innerText = "+";
+  }
+};
+console.log(addition(5, "+", 10));
+plus.addEventListener("click", addition);
+//how can I apply this to my numbers
