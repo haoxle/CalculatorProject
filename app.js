@@ -1,28 +1,25 @@
 //when I click on a button, it goes onto the div screen: start by doing..
 
 // Create the query selector for each element
-const operator = document.querySelector("#gbac");
+const acBtn = document.querySelector("#gbac");
 const displayScreen = document.querySelector("#gbbb");
 const numbers = Array.from(document.querySelectorAll(".numBtn"));
-const plus = document.querySelector(".operatorBtnPlus");
-const divide = document.querySelector(".operatorBtnDivide");
-const multiply = document.querySelector(".operatorBtnMultiply");
-const subtract = document.querySelector(".operatorBtnMinus");
+const operator = Array.from(document.querySelectorAll(".operator"));
 const equals = document.querySelector(".equalsBtn");
 
 let resultDisplayed = false;
-
+console.log(operator);
 console.log(numbers);
 //Set the screen to null?
 displayScreen.innerText = null;
 
 //When you press AC it turns screen to zero
-const startCalc = (event) => {
+const startCalc = (e) => {
   event.preventDefault();
   displayScreen.textContent = 0;
 };
 
-operator.addEventListener("click", startCalc);
+acBtn.addEventListener("click", startCalc);
 
 //When I enter a number it will appear on the screen, including multiple numbers
 //I will need some conditions such as when I press AC, the number does not add on top of 0
@@ -59,17 +56,43 @@ for (var i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener("click", enteringNumbs);
 }
 
-//function to add numbers
-//will need a current value and previous value
-//when I press equals it will trigger the answer only if there is a + there
-// on click of 'equal' button
+//function to use operators, previous function can work?
 
-//start with a really basic function and build up (switch cases)
-const addition = (e) => {
-  if (plus === "+") {
-    displayScreen.innerText = "+";
-  }
+const getOperator = (e) => {
+  const currNum = displayScreen.textContent;
+  const lastNum = currNum[currNum.length - 1];
+  if (
+    lastNum === "+" ||
+    lastNum === "-" ||
+    lastNum === "x" ||
+    lastNum === "÷"
+  ) {
+    const newNum =
+      currNum.substring(0, currNum.length - 1) + e.target.textContent;
+    displayScreen.textContent = newNum;
+  } else if (currNum.length == 0) {
+    startCalc(e);
+  } else displayScreen.textContent += e.target.textContent;
 };
-console.log(addition(5, "+", 10));
-plus.addEventListener("click", addition);
-//how can I apply this to my numbers
+
+for (var i = 0; i < operator.length; i++) {
+  operator[i].addEventListener("click", getOperator);
+}
+
+// const Calculatrice = (a, b, op) => {
+//   switch (op) {
+//     case "+":
+//       return a + b;
+//       break;
+//     case "-":
+//       return a - b;
+//       break;
+//     case "x":
+//       return a * b;
+//       break;
+//     case "÷":
+//       return a / b;
+//       break;
+//   }
+// }
+// console.log(Calculatrice(5, 5, "+"));
