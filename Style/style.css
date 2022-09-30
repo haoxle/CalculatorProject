@@ -1,3 +1,103 @@
+.calculatorGrid {
+  height: 55vh;
+  width: 40vh;
+  display: grid;
+  grid-template: "gbac gbp gbx gbd" "gb7 gb8 gb9 gbm" "gb4 gb5 gb6 gbplus" "gb1 gb2 gb3 gbequals" "gb0 gbdot gbps gbequals";
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  align-items: center;
+  justify-items: center;
+  border: 2px solid white;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 0 10px 5px #56ab91 inset, 0 0 10px 5px #56ab91;
+  padding: 2%;
+}
+
+button {
+  text-decoration: none;
+  background: none;
+}
+
+#gbac {
+  grid-area: gbac;
+  box-shadow: 0 0 10px 5px #56ab91 inset, 0 0 10px 5px #56ab91;
+}
+
+#gbps {
+  grid-area: gbps;
+}
+
+#gbp {
+  grid-area: gbp;
+}
+
+#gbd {
+  grid-area: gbd;
+}
+
+#gb7 {
+  grid-area: gb7;
+}
+
+#gb8 {
+  grid-area: gb8;
+}
+
+#gb9 {
+  grid-area: gb9;
+}
+
+#gbx {
+  grid-area: gbx;
+}
+
+#gb4 {
+  grid-area: gb4;
+}
+
+#gb5 {
+  grid-area: gb5;
+}
+
+#gb6 {
+  grid-area: gb6;
+}
+
+#gbm {
+  grid-area: gbm;
+}
+
+#gb1 {
+  grid-area: gb1;
+}
+
+#gb2 {
+  grid-area: gb2;
+}
+
+#gb3 {
+  grid-area: gb3;
+}
+
+#gbplus {
+  grid-area: gbplus;
+}
+
+#gb0 {
+  grid-area: gb0;
+  width: 90%;
+}
+
+#gbdot {
+  grid-area: gbdot;
+}
+
+#gbequals {
+  grid-area: gbequals;
+  box-shadow: 0 0 10px 5px #ffc300 inset, 0 0 10px 5px #ffc300;
+  height: 90%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,21 +121,9 @@ body section {
   width: 40vh;
   background-color: rgba(0, 0, 0, 0.7);
 }
-body section .calculatorGrid {
-  height: 55vh;
-  width: 40vh;
-  display: grid;
-  grid-template: "gbac gbp gbx gbd" "gb7 gb8 gb9 gbm" "gb4 gb5 gb6 gbplus" "gb1 gb2 gb3 gbequals" "gb0 gbdot gbps gbequals";
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-  align-items: center;
-  justify-items: center;
-  border: 2px solid white;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 5px #56ab91 inset, 0 0 10px 5px #56ab91;
-  padding: 2%;
-}
-body section .calculatorButton {
+body section .calculatorButton,
+body section .operatorBtn,
+body section .numBtn {
   display: flex;
   height: 85%;
   width: 85%;
@@ -72,69 +160,4 @@ body section #gbequals:active {
   box-shadow: 0 0 10px 3px #ff686b inset, 0 0 10px 3px #ff686b;
   color: #ff686b;
   text-shadow: 0 0 400px rgb(255, 132, 255), 0 0 50px rgb(255, 132, 255), 0 0 30px rgb(255, 132, 255), 0 0 70px rgb(255, 132, 255), 0 0 80px rgb(255, 132, 255), 0 0 90px rgb(255, 132, 255), 0 0 10px rgb(255, 132, 255);
-}
-body section button {
-  text-decoration: none;
-  background: none;
-}
-body section #gbac {
-  grid-area: gbac;
-  box-shadow: 0 0 10px 5px #56ab91 inset, 0 0 10px 5px #56ab91;
-}
-body section #gbps {
-  grid-area: gbps;
-}
-body section #gbp {
-  grid-area: gbp;
-}
-body section #gbd {
-  grid-area: gbd;
-}
-body section #gb7 {
-  grid-area: gb7;
-}
-body section #gb8 {
-  grid-area: gb8;
-}
-body section #gb9 {
-  grid-area: gb9;
-}
-body section #gbx {
-  grid-area: gbx;
-}
-body section #gb4 {
-  grid-area: gb4;
-}
-body section #gb5 {
-  grid-area: gb5;
-}
-body section #gb6 {
-  grid-area: gb6;
-}
-body section #gbm {
-  grid-area: gbm;
-}
-body section #gb1 {
-  grid-area: gb1;
-}
-body section #gb2 {
-  grid-area: gb2;
-}
-body section #gb3 {
-  grid-area: gb3;
-}
-body section #gbplus {
-  grid-area: gbplus;
-}
-body section #gb0 {
-  grid-area: gb0;
-  width: 90%;
-}
-body section #gbdot {
-  grid-area: gbdot;
-}
-body section #gbequals {
-  grid-area: gbequals;
-  box-shadow: 0 0 10px 5px #ffc300 inset, 0 0 10px 5px #ffc300;
-  height: 90%;
 }/*# sourceMappingURL=style.css.map */

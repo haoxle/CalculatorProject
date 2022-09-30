@@ -22,7 +22,9 @@ body {
     width: 40vh;
     background-color: rgba(0, 0, 0, 0.7);
 
-    .calculatorButton {
+    .calculatorButton,
+    .operatorBtn,
+    .numBtn {
       display: flex;
       height: 85%;
       width: 85%;
