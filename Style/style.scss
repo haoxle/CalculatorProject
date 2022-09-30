@@ -24,7 +24,15 @@ body {
 
     .calculatorButton,
     .operatorBtn,
-    .numBtn {
+    .numBtn,
+    .operatorBtnPlus,
+    .operatorBtnMinus,
+    .operatorBtnPM,
+    .operatorBtnPercent,
+    .operatorBtnDivide,
+    .operatorBtnMultiply,
+    .dotBtn,
+    .equalsBtn {
       display: flex;
       height: 85%;
       width: 85%;
