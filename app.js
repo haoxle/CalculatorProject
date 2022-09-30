@@ -1,6 +1,3 @@
-//when I click on a button, it goes onto the div screen: start by doing..
-
-// Create the query selector for each element
 const acBtn = document.querySelector("#gbac");
 const displayScreen = document.querySelector("#gbbb");
 const numbers = Array.from(document.querySelectorAll(".numBtn"));
@@ -10,36 +7,26 @@ const equals = document.querySelector(".equalsBtn");
 let resultDisplayed = false;
 console.log(operator);
 console.log(numbers);
-//Set the screen to null?
 displayScreen.innerText = null;
 
-//When you press AC it turns screen to zero
 const startCalc = (e) => {
-  event.preventDefault();
+  e.preventDefault();
   displayScreen.textContent = 0;
 };
 
 acBtn.addEventListener("click", startCalc);
 
-//When I enter a number it will appear on the screen, including multiple numbers
-//I will need some conditions such as when I press AC, the number does not add on top of 0
-//if use the calculator and would like to add more, how can I continue adding numbers without getting rid of old
-//will need to create a storage
-
 const enteringNumbs = (e) => {
   const currNum = displayScreen.textContent;
   const lastNum = currNum[currNum.length - 1];
-  //remove 0 when you press AC
+
   if (currNum[0] === "0") {
     displayScreen.textContent = "";
   }
 
-  //if there is no result you can add numbers
   if (resultDisplayed === false) {
     displayScreen.textContent += e.target.textContent;
-  }
-  // if you received your answer and add an operator function, you can add more
-  else if (
+  } else if (
     (resultDisplayed === true && lastNum == "+") ||
     lastNum == "-" ||
     lastNum == "x" ||
@@ -47,29 +34,22 @@ const enteringNumbs = (e) => {
   ) {
     resultDisplayed = false;
     displayScreen.textContent += e.target.textContent;
-  }
-  // if none of the above happens you start at 0
-  else startCalc(e);
+  } else startCalc(e);
 };
 
 for (var i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener("click", enteringNumbs);
 }
 
-//function to use operators, previous function can work?
-
 const getOperator = (e) => {
-  //storage as above
   const currNum = displayScreen.textContent;
   const lastNum = currNum.substring(currNum.length - 3);
-  console.log(lastNum);
   if (
     lastNum === " + " ||
     lastNum === " - " ||
     lastNum === " x " ||
     lastNum === " ÷ "
   ) {
-    //adding substring returns all of the first sequence of numbers
     const newNum =
       currNum.substring(0, currNum.length - 3) +
       " " +
