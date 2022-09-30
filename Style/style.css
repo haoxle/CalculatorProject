@@ -2,14 +2,14 @@
   height: 55vh;
   width: 40vh;
   display: grid;
-  grid-template: "gbac gbp gbx gbd" "gb7 gb8 gb9 gbm" "gb4 gb5 gb6 gbplus" "gb1 gb2 gb3 gbequals" "gb0 gbdot gbps gbequals";
+  grid-template: "gbac gbac gbx gbd" "gb7 gb8 gb9 gbm" "gb4 gb5 gb6 gbplus" "gb1 gb2 gb3 gbequals" "gb0 gb0 gbdot gbequals";
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 20% 20% 20% 20% 20%;
   align-items: center;
   justify-items: center;
   border: 2px solid white;
   border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 5px #56ab91 inset, 0 0 10px 5px #56ab91;
+  box-shadow: 0 0 10px 5px #2a9d8f inset, 0 0 10px 5px #2a9d8f;
   padding: 2%;
 }
 
@@ -20,6 +20,7 @@ button {
 
 #gbac {
   grid-area: gbac;
+  width: 95%;
   box-shadow: 0 0 10px 5px #56ab91 inset, 0 0 10px 5px #56ab91;
 }
 
@@ -122,14 +123,8 @@ body section {
   background-color: rgba(0, 0, 0, 0.7);
 }
 body section .calculatorButton,
-body section .operatorBtn,
+body section .operator,
 body section .numBtn,
-body section .operatorBtnPlus,
-body section .operatorBtnMinus,
-body section .operatorBtnPM,
-body section .operatorBtnPercent,
-body section .operatorBtnDivide,
-body section .operatorBtnMultiply,
 body section .dotBtn,
 body section .equalsBtn {
   display: flex;

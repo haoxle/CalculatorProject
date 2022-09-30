@@ -23,14 +23,8 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 
     .calculatorButton,
-    .operatorBtn,
+    .operator,
     .numBtn,
-    .operatorBtnPlus,
-    .operatorBtnMinus,
-    .operatorBtnPM,
-    .operatorBtnPercent,
-    .operatorBtnDivide,
-    .operatorBtnMultiply,
     .dotBtn,
     .equalsBtn {
       display: flex;

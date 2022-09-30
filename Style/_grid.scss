@@ -7,19 +7,18 @@
   // "gbbb gbbb gbbb gbbb"
   // "gbbb gbbb gbbb gbbb"
 
-    "gbac gbp gbx gbd"
+    "gbac gbac gbx gbd"
     "gb7 gb8 gb9 gbm"
     "gb4 gb5 gb6 gbplus"
     "gb1 gb2 gb3 gbequals"
-    "gb0 gbdot gbps gbequals";
+    "gb0 gb0 gbdot gbequals";
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 20% 20% 20% 20% 20%;
   align-items: center;
   justify-items: center;
   border: 2px solid white;
   border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 5px $color-quaternary inset,
-    0 0 10px 5px $color-quaternary;
+  box-shadow: 0 0 10px 5px $color-quinary inset, 0 0 10px 5px $color-quinary;
   padding: 2%;
 }
 
@@ -29,7 +28,7 @@ button {
 }
 #gbac {
   grid-area: gbac;
-
+  width: 95%;
   box-shadow: 0 0 10px 5px $color-quaternary inset,
     0 0 10px 5px $color-quaternary;
 }
