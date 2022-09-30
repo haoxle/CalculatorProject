@@ -1,0 +1,27 @@
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  body {
+    background-image: url(./neon.jpg);
+    background-size: cover;
+
+    section {
+      margin-top: 15%;
+    }
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 820px) {
+  body {
+    background-image: url(./wp3102502.jpg);
+    background-size: cover;
+
+    section {
+      margin-top: 12%;
+    }
+  }
+}
+
+@media screen and (min-width: 821px) and (max-width: 7000px) {
+  body {
+    background-image: url(./wp9119050.jpg);
+    background-size: cover;
+  }
+}

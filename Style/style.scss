@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./grid" as *;
+@use "./mediaqueries" as *;
 
 * {
   box-sizing: border-box;
@@ -7,8 +8,6 @@
   padding: 0;
 }
 body {
-  background-image: url(./wp9119050.jpg);
-  background-size: cover;
   height: 100%;
   width: 100%;
   main {
