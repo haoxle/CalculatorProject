@@ -79,10 +79,12 @@ for (var i = 0; i < operator.length; i++) {
 
 //this is the equals function
 const calcAns = (e) => {
+  // note the previous i added spaces to allow the .split method pulls into a string
   const arrInString = displayScreen.textContent.split(" ");
   console.log(arrInString);
   const x = Number(arrInString[0]);
   const y = Number(arrInString[2]);
+  // self explanatory
   switch (arrInString[1]) {
     case "+":
       displayScreen.textContent = x + y;
