@@ -79,27 +79,7 @@ const getOperator = (e) => {
     currOp === "x" ||
     currOp === "÷"
   ) {
-    const x = Number(arrInString[0]);
-    const y = Number(arrInString[2]);
-
-    // self explanatory
-    switch (arrInString[1]) {
-      case "+":
-        result = x + y;
-        break;
-      case "-":
-        result = x - y;
-        break;
-      case "x":
-        result = x * y;
-        break;
-      case "÷":
-        result = x / y;
-        break;
-      default:
-        result = "0";
-    }
-    displayScreen.textContent = `${result} ${e.target.textContent} `;
+    calcAns(e);
     //if there is no operator there, it will add an operator to the end
   } else displayScreen.textContent += ` ${e.target.textContent} `;
 };
@@ -134,12 +114,11 @@ const calcAns = (e) => {
     default:
       result = "0";
   }
-  displayScreen.textContent = result;
+  if (e.target.textContent === "=") {
+    displayScreen.textContent = result;
+  } else {
+    displayScreen.textContent = `${result} ${e.target.textContent} `;
+  }
 };
 
 equals.addEventListener("click", calcAns);
-
-// if (arrInString[3] === " + " || " - " || " x " || " ÷ ") {
-//   arrInString.pop(3);
-//   displayScreen.textContent = arrInString;
-// }
