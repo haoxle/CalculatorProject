@@ -9,6 +9,7 @@ console.log(numbers);
 
 //giving an initial value (will change as you use the calculator)
 let resultDisplayed = false;
+let result = null;
 displayScreen.innerText = null;
 
 //When you click AC it will turn the calculator on and give you 0
@@ -51,8 +52,11 @@ for (var i = 0; i < numbers.length; i++) {
 
 //This is similar to previous but allows to insert the operator iteself
 const getOperator = (e) => {
+  console.log(e.target.textContent);
   const currNum = displayScreen.textContent;
   const lastNum = currNum.substring(currNum.length - 3);
+  const arrInString = displayScreen.textContent.split(" ");
+  const currOp = arrInString[1];
   //if the last number is an operator and you click on another operator, it will replace the previous operator with a new one.
   if (
     lastNum === " + " ||
@@ -69,10 +73,37 @@ const getOperator = (e) => {
     // 1 + = 0
   } else if (currNum.length == 0) {
     startCalc(e);
+  } else if (
+    currOp === "+" ||
+    currOp === "-" ||
+    currOp === "x" ||
+    currOp === "÷"
+  ) {
+    const x = Number(arrInString[0]);
+    const y = Number(arrInString[2]);
 
+    // self explanatory
+    switch (arrInString[1]) {
+      case "+":
+        result = x + y;
+        break;
+      case "-":
+        result = x - y;
+        break;
+      case "x":
+        result = x * y;
+        break;
+      case "÷":
+        result = x / y;
+        break;
+      default:
+        result = "0";
+    }
+    displayScreen.textContent = `${result} ${e.target.textContent} `;
     //if there is no operator there, it will add an operator to the end
   } else displayScreen.textContent += ` ${e.target.textContent} `;
 };
+
 for (var i = 0; i < operator.length; i++) {
   operator[i].addEventListener("click", getOperator);
 }
@@ -80,27 +111,35 @@ for (var i = 0; i < operator.length; i++) {
 //this is the equals function
 const calcAns = (e) => {
   // note the previous i added spaces to allow the .split method pulls into a string
+  // check if result is true,
   const arrInString = displayScreen.textContent.split(" ");
   console.log(arrInString);
   const x = Number(arrInString[0]);
   const y = Number(arrInString[2]);
+
   // self explanatory
   switch (arrInString[1]) {
     case "+":
-      displayScreen.textContent = x + y;
+      result = x + y;
       break;
     case "-":
-      displayScreen.textContent = x - y;
+      result = x - y;
       break;
     case "x":
-      displayScreen.textContent = x * y;
+      result = x * y;
       break;
     case "÷":
-      displayScreen.textContent = x / y;
+      result = x / y;
       break;
     default:
-      displayScreen.textContent = "0";
+      result = "0";
   }
+  displayScreen.textContent = result;
 };
 
 equals.addEventListener("click", calcAns);
+
+// if (arrInString[3] === " + " || " - " || " x " || " ÷ ") {
+//   arrInString.pop(3);
+//   displayScreen.textContent = arrInString;
+// }
