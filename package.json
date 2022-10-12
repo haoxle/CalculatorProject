@@ -1,0 +1,22 @@
+{
+  "name": "calculatorproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "cypress": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haoxle/CalculatorProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haoxle/CalculatorProject/issues"
+  },
+  "homepage": "https://github.com/haoxle/CalculatorProject#readme",
+  "devDependencies": {
+    "cypress": "^10.10.0"
+  }
+}
